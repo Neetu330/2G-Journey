@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxVibe Travels | Adventure Albums</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- style css -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- ================= NAVIGATION BAR ================= -->
+    <nav class="navbar fixed-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="#">LuxVibe Vault</a>
+            <!-- Dynamic breadcrumb button that shows only inside active folders -->
+            <div id="backNavWrapper" class="d-none">
+                <span class="back-to-albums-btn" id="btnBackToAlbums">
+                    <i class="fas fa-arrow-left me-2"></i> Back to Albums
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= PAGE HEADINGS ================= -->
+    <header class="gallery-header">
+        <div class="container">
+            <h1 id="mainGalleryHeading">Travel Albums</h1>
+            <p id="mainGallerySubheading">Browse curated memories by destinations and tours</p>
+        </div>
+    </header>
+
+    <main class="pb-5">
+        <div class="container">
+            
+            <!-- ================= GLOBAL CONTROL HUB BAR ================= -->
+            <div class="control-panel mb-5">
+                <div class="row g-3 align-items-center">
+                    <div class="col-md-8 search-wrapper">
+                        <div class="input-group bg-dark rounded border border-secondary px-2">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                            <input type="text" id="globalGallerySearch" class="form-control" placeholder="Search albums by name or timeline space...">
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-md-end sort-wrapper">
+                        <div class="d-flex align-items-center justify-content-md-end">
+                            <label class="me-2 text-white-50 small text-nowrap"><i class="fas fa-sort me-1"></i> Sort By:</label>
+                            <select id="globalGallerySort" class="form-select">
+                                <option value="date-desc">Date: Newest First</option>
+                                <option value="date-asc">Date: Oldest First</option>
+                                <option value="name-asc">Name: A to Z</option>
+                                <option value="name-desc">Name: Z to A</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= VIEW CONTAINER A: MAIN ALBUM LIST VIEW ================= -->
+            <div class="row g-4" id="albumCoversGrid">
+                
+                <!-- Album Card 1 -->
+                <div class="col-md-6 col-lg-4 album-item-wrapper" data-album-id="dubai-2026" data-title="Dubai Luxury Escape" data-date="2026-04-10" data-string-date="April 2026">
+                    <div class="album-card">
+                        <span class="album-badge"><i class="fas fa-images me-1"></i> 2 Items</span>
+                        <div class="album-cover-wrapper">
+                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80" alt="Dubai">
+                        </div>
+                        <div class="album-meta">
+                            <h4 class="album-title">Dubai Luxury Escape</h4>
+                            <div class="album-date"><i class="far fa-calendar-alt me-1"></i> April 2026</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Album Card 2 -->
+                <div class="col-md-6 col-lg-4 album-item-wrapper" data-album-id="goa-2026" data-title="Goa Yacht Week" data-date="2026-05-15" data-string-date="May 2026">
+                    <div class="album-card">
+                        <span class="album-badge"><i class="fas fa-images me-1"></i> 2 Items</span>
+                        <div class="album-cover-wrapper">
+                            <img src="https://images.unsplash.com/photo-1540206395-68808572332f?auto=format&fit=crop&w=600&q=80" alt="Goa">
+                        </div>
+                        <div class="album-meta">
+                            <h4 class="album-title">Goa Yacht Week</h4>
+                            <div class="album-date"><i class="far fa-calendar-alt me-1"></i> May 2026</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Album Card 3 -->
+                <div class="col-md-6 col-lg-4 album-item-wrapper" data-album-id="himalayas-2026" data-title="Himalayan Glass Resorts" data-date="2026-01-22" data-string-date="Jan 2026">
+                    <div class="album-card">
+                        <span class="album-badge"><i class="fas fa-images me-1"></i> 1 Item</span>
+                        <div class="album-cover-wrapper">
+                            <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=600&q=80" alt="Manali">
+                        </div>
+                        <div class="album-meta">
+                            <h4 class="album-title">Himalayan Glass Resorts</h4>
+                            <div class="album-date"><i class="far fa-calendar-alt me-1"></i> Jan 2026</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- ================= VIEW CONTAINER B: INNER MEDIA TRACK TILES (HIDDEN BY DEFAULT) ================= -->
+            <div class="row g-4 d-none" id="innerAlbumMediaGrid">
+                
+                <!-- DUBAI ALBUM CONTENT -->
+                <div class="col-sm-6 col-md-4 col-xl-3 inner-media-item" data-parent-album="dubai-2026" data-type="video" data-name="Dubai Helicopter Tour Ride" data-date="2026-04-10" data-display-date="April 10, 2026" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                    <div class="gallery-card">
+                        <div class="media-container">
+                            <div class="video-overlay"><i class="fab fa-youtube"></i></div>
+                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=500&q=80" alt="">
+                        </div>
+                        <div class="meta-content">
+                            <h5 class="media-name">Dubai Helicopter Tour Ride</h5>
+                            <span class="media-date">April 10, 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-xl-3 inner-media-item" data-parent-album="dubai-2026" data-type="image" data-name="Burj Al Arab Skyline Night" data-date="2026-04-12" data-display-date="April 12, 2026">
+                    <div class="gallery-card">
+                        <div class="media-container">
+                            <img src="https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?auto=format&fit=crop&w=500&q=80" alt="">
+                        </div>
+                        <div class="meta-content">
+                            <h5 class="media-name">Burj Al Arab Skyline Night</h5>
+                            <span class="media-date">April 12, 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GOA ALBUM CONTENT -->
+                <div class="col-sm-6 col-md-4 col-xl-3 inner-media-item" data-parent-album="goa-2026" data-type="image" data-name="Yacht Party Sunset Lounge" data-date="2026-05-15" data-display-date="May 15, 2026">
+                    <div class="gallery-card">
+                        <div class="media-container">
+                            <img src="https://images.unsplash.com/photo-1540206395-68808572332f?auto=format&fit=crop&w=500&q=80" alt="">
+                        </div>
+                        <div class="meta-content">
+                            <h5 class="media-name">Yacht Party Sunset Lounge</h5>
+                            <span class="media-date">May 15, 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 col-xl-3 inner-media-item" data-parent-album="goa-2026" data-type="video" data-name="Goa Scuba Diving Diary" data-date="2026-05-17" data-display-date="May 17, 2026" data-src="https://www.youtube.com/embed/jNQXAC9IVRw">
+                    <div class="gallery-card">
+                        <div class="media-container">
+                            <div class="video-overlay"><i class="fab fa-youtube"></i></div>
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="">
+                        </div>
+                        <div class="meta-content">
+                            <h5 class="media-name">Goa Scuba Diving Diary</h5>
+                            <span class="media-date">May 17, 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HIMALAYAS ALBUM CONTENT -->
+                <div class="col-sm-6 col-md-4 col-xl-3 inner-media-item" data-parent-album="himalayas-2026" data-type="image" data-name="Manali Luxury Dome Room View" data-date="2026-01-22" data-display-date="Jan 22, 2026">
+                    <div class="gallery-card">
+                        <div class="media-container">
+                            <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=500&q=80" alt="">
+                        </div>
+                        <div class="meta-content">
+                            <h5 class="media-name">Manali Luxury Dome Room View</h5>
+                            <span class="media-date">Jan 22, 2026</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- EMPTY LOG RECOVERY STATUS BOX -->
+            <div id="galleryEmptyFallback" class="no-results d-none mt-4">
+                <i class="fas fa-folder-open"></i>
+                <h4>No Matches Located</h4>
+                <p class="text-white-50 small mb-0">Refine your file details string query parameters.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ================= MEDIA POPUP MODAL ARCHITECTURE ================= -->
+    <div class="modal fade" id="albumAssetModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAssetTitle">Asset Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalPopupImage" src="" alt="Preview Pic" class="d-none">
+                    <div id="modalPopupVideoWrapper" class="ratio ratio-16x9 d-none">
+                        <iframe id="modalPopupIframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span id="modalAssetDate">Date Stamp</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="assets/js/main.js"></script>
+</body>
+</html>
