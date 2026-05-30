@@ -1,273 +1,592 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuxVibe Travels | Elite Packages Portfolio</title>
-    
-    <!-- Bootstrap 5 CSS -->
+    <title>2G Journey | Luxury Travel Packages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- FontAwesome Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-    <!-- Google Fonts (Poppins) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- style css -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <style></style>
 </head>
-<body>
 
-    <!-- ================= NAVBAR ================= -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">LuxVibe Travels</a>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container"><a class="navbar-brand text-white" href="#"><span
+                    class="text-gold">2G</span>Journey</a><button class="navbar-toggler border-0" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="package.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Why Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div
+                    class="d-flex align-items-center bg-black bg-opacity-40 p-2 rounded border border-secondary text-start header-review-widget">
+                    <div class="me-2 text-center"><span class="fw-bold text-white d-block lh-1"
+                            style="font-size:15px;">⭐ 4.9</span><small class="text-gold"
+                            style="font-size: 10px; font-weight:700;">Google Rating</small></div>
+                    <div class="border-start border-secondary ps-2 me-2"><small class="d-block text-white-50 lh-1"
+                            style="font-size: 11px;">250+ Happy</small><small class="fw-medium text-white"
+                            style="font-size: 11px;">Travelers</small></div><a href="https://google.com" target="_blank"
+                        class="btn btn-gold btn-sm py-1 px-2" style="font-size: 11px;">Add Review</a>
+                </div>
+            </div>
         </div>
     </nav>
-
-    <!-- ================= HERO SECTOR ================= -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Elite Destinations Portfolio</h1>
-            <p>Curated Luxury Journeys • Handpicked Experiences</p>
-        </div>
-    </section>
-
-    <!-- ================= MAIN EXPLORER CONTAINER ================= -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row g-4">
-
-                <!-- SIDEBAR CONTROLS COLUMN -->
-                <div class="col-lg-3">
-                    <div class="filter-box">
-                        <div class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-2 mb-3">
-                            <h5 class="m-0 fw-bold uppercase small text-white" style="letter-spacing:1px;">Filters</h5>
-                            <button class="btn btn-sm btn-reset rounded" id="resetFiltersBtn">Clear All</button>
-                        </div>
-
-                        <!-- Destination Filters -->
-                        <div class="filter-section-title">Destinations</div>
-                        <div id="destinationCheckboxGroup">
-                            <label class="custom-check">
-                                <input type="checkbox" class="filter-destination" value="Goa"> Goa Portfolio
-                            </label>
-                            <label class="custom-check">
-                                <input type="checkbox" class="filter-destination" value="Dubai"> Dubai Collections
-                            </label>
-                            <label class="custom-check">
-                                <input type="checkbox" class="filter-destination" value="Rajasthan"> Rajasthan Heritage
-                            </label>
-                            <label class="custom-check">
-                                <input type="checkbox" class="filter-destination" value="Dwarka"> Dwarka Spiritual
-                            </label>
-                            <label class="custom-check">
-                                <input type="checkbox" class="filter-destination" value="Manali"> Manali Alpine
-                            </label>
-                        </div>
-
-                        <!-- NEW: Day / Night Duration Filters -->
-                        <div class="filter-section-title">Duration</div>
-                        <div id="durationCheckboxGroup">
-                            <label class="custom-check">
-                                <input type="checkbox" class="filter-duration" value="3n/4d"> 3 Nights / 4 Days
-                            </label>
-                            <label class="custom-check">
-                                <input type="checkbox" class="filter-duration" value="4n/5d"> 4 Nights / 5 Days
-                            </label>
-                            <label class="custom-check">
-                                <input type="checkbox" class="filter-duration" value="5n/6d"> 5 Nights / 6 Days
-                            </label>
-                            <label class="custom-check">
-                                <input type="checkbox" class="filter-duration" value="6n/7d"> 6 Nights / 7 Days
-                            </label>
-                        </div>
-
-                        <!-- Budget Filters -->
-                        <div class="filter-section-title">Pricing Classes</div>
-                        <div id="budgetRadioGroup">
-                            <label class="custom-radio">
-                                <input type="radio" name="budgetRadio" value="low"> Under ₹50,000
-                            </label>
-                            <label class="custom-radio">
-                                <input type="radio" name="budgetRadio" value="mid"> ₹50,000 - ₹1,00,000
-                            </label>
-                            <label class="custom-radio">
-                                <input type="radio" name="budgetRadio" value="high"> Above ₹1,00,000
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CARDS DISPLAY COLUMN -->
-                <div class="col-lg-9">
-                    
-                    <!-- GLOBAL INTERACTIVE SEARCH BAR -->
-                    <div class="search-wrapper mb-4">
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="fas fa-search"></i></span>
-                            <input type="text" id="globalSearchInput" class="form-control" placeholder="Search across titles, amounts, durations (e.g. 4N/5D), or locations...">
-                        </div>
-                    </div>
-
-                    <!-- TOUR PACKAGES GRID LAYER -->
-                    <div class="row g-4" id="packageListGrid">
-
-                        <!-- Package 1: Goa -->
-                        <div class="col-md-6 col-xl-4 package-item" 
-                             data-title="goa luxury escape beach villas yacht party" 
-                             data-destination="Goa" 
-                             data-duration="4n/5d" 
-                             data-price="45000">
-                            <div class="package-card">
-                                <div class="img-container">
-                                    <span class="badge-gold">4N/5D</span>
-                                    <img src="https://images.unsplash.com/photo-1540206395-68808572332f?auto=format&fit=crop&w=600&q=80" alt="Goa Escapes">
-                                </div>
-                                <div class="card-body-content">
-                                    <div class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Goa, India</div>
-                                    <h5 class="package-title">Goa Luxury Escape</h5>
-                                    <p class="package-desc">Indulge in high-end private beach villas, custom curated premium lounge entries, and private yacht sunset parties.</p>
-                                    <div class="price-container d-flex justify-content-between align-items-center mb-3">
-                                        <div>
-                                            <div class="price-label">Value Tier</div>
-                                            <div class="price-amount">₹45,000</div>
-                                        </div>
-                                        <div class="text-end text-muted small">Per Guest</div>
-                                    </div>
-                                    <button class="btn btn-gold w-100"><i class="fab fa-whatsapp me-2"></i>Book on WhatsApp</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Package 2: Dubai -->
-                        <div class="col-md-6 col-xl-4 package-item" 
-                             data-title="dubai ultra luxury opulence armani hotel burj khalifa" 
-                             data-destination="Dubai" 
-                             data-duration="5n/6d" 
-                             data-price="125000">
-                            <div class="package-card">
-                                <div class="img-container">
-                                    <span class="badge-gold">5N/6D</span>
-                                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80" alt="Dubai Luxury">
-                                </div>
-                                <div class="card-body-content">
-                                    <div class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Dubai, UAE</div>
-                                    <h5 class="package-title">Dubai Ultra Luxury</h5>
-                                    <p class="package-desc">Exquisite stays inside the iconic Armani Hotel paired with VIP lounge access to the towering Burj Khalifa summit levels.</p>
-                                    <div class="price-container d-flex justify-content-between align-items-center mb-3">
-                                        <div>
-                                            <div class="price-label">Value Tier</div>
-                                            <div class="price-amount">₹1,25,000</div>
-                                        </div>
-                                        <div class="text-end text-muted small">Per Guest</div>
-                                    </div>
-                                    <button class="btn btn-gold w-100"><i class="fab fa-whatsapp me-2"></i>Book on WhatsApp</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Package 3: Rajasthan -->
-                        <div class="col-md-6 col-xl-4 package-item" 
-                             data-title="rajasthan royal heritage caravan palace lake taj" 
-                             data-destination="Rajasthan" 
-                             data-duration="6n/7d" 
-                             data-price="65000">
-                            <div class="package-card">
-                                <div class="img-container">
-                                    <span class="badge-gold">6N/7D</span>
-                                    <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=600&q=80" alt="Rajasthan Heritage">
-                                </div>
-                                <div class="card-body-content">
-                                    <div class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Rajasthan, India</div>
-                                    <h5 class="package-title">Rajasthan Royal Heritage</h5>
-                                    <p class="package-desc">Live like kings within genuine desert palace sites. Includes custom royal caravan excursions and fort gala dinner formats.</p>
-                                    <div class="price-container d-flex justify-content-between align-items-center mb-3">
-                                        <div>
-                                            <div class="price-label">Value Tier</div>
-                                            <div class="price-amount">₹65,000</div>
-                                        </div>
-                                        <div class="text-end text-muted small">Per Guest</div>
-                                    </div>
-                                    <button class="btn btn-gold w-100"><i class="fab fa-whatsapp me-2"></i>Book on WhatsApp</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Package 4: Dwarka -->
-                        <div class="col-md-6 col-xl-4 package-item" 
-                             data-title="dwarka spiritual pilgrimage elite temple darsan heritage stay" 
-                             data-destination="Dwarka" 
-                             data-duration="3n/4d" 
-                             data-price="38000">
-                            <div class="package-card">
-                                <div class="img-container">
-                                    <span class="badge-gold">3N/4D</span>
-                                    <img src="https://images.unsplash.com/photo-1609137144813-7d7211bf2751?auto=format&fit=crop&w=600&q=80" alt="Dwarka Spiritual">
-                                </div>
-                                <div class="card-body-content">
-                                    <div class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Dwarka, Gujarat</div>
-                                    <h5 class="package-title">Dwarka Spiritual Tour</h5>
-                                    <p class="package-desc">Sacred explorations structured with priority VIP darsans passes, high-tier premium drivers, and pure luxury heritage resort stays.</p>
-                                    <div class="price-container d-flex justify-content-between align-items-center mb-3">
-                                        <div>
-                                            <div class="price-label">Value Tier</div>
-                                            <div class="price-amount">₹38,000</div>
-                                        </div>
-                                        <div class="text-end text-muted small">Per Guest</div>
-                                    </div>
-                                    <button class="btn btn-gold w-100"><i class="fab fa-whatsapp me-2"></i>Book on WhatsApp</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Package 5: Manali -->
-                        <div class="col-md-6 col-xl-4 package-item" 
-                             data-title="manali alpine snow escape glass cottage mountain chalets adventure" 
-                             data-destination="Manali" 
-                             data-duration="5n/6d" 
-                             data-price="52000">
-                            <div class="package-card">
-                                <div class="img-container">
-                                    <span class="badge-gold">5N/6D</span>
-                                    <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=600&q=80" alt="Manali Snow">
-                                </div>
-                                <div class="card-body-content">
-                                    <div class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Manali, India</div>
-                                    <h5 class="package-title">Manali Alpine Escape</h5>
-                                    <p class="package-desc">Breathtaking modern glass cottages amidst snow peaks. Includes personal bonfire setups and private luxury spa appointments.</p>
-                                    <div class="price-container d-flex justify-content-between align-items-center mb-3">
-                                        <div>
-                                            <div class="price-label">Value Tier</div>
-                                            <div class="price-amount">₹52,000</div>
-                                        </div>
-                                        <div class="text-end text-muted small">Per Guest</div>
-                                    </div>
-                                    <button class="btn btn-gold w-100"><i class="fab fa-whatsapp me-2"></i>Book on WhatsApp</button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- FALLBACK NO RESULTS ELEMENT -->
-                    <div id="noResultsFallbackBox" class="no-results-box d-none mt-4">
-                        <i class="fas fa-compass"></i>
-                        <h4>No Elite Custom Packages Found</h4>
-                        <p class="text-white-50 small mb-0">Try adjusting your pricing tiers, duration selections, destination checks, or input text query keywords.</p>
-                    </div>
-
+    <section class="inner-hero-banner">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="inner-banner-title"><span class="special-text">Luxury</span> Tour <span class="special-text">Packages</span></h1>
+                    <p class="inner-banner-caption">Discover premium destinations with unforgettable travel experiences
+                    </p>
                 </div>
             </div>
         </div>
     </section>
+    <section class="main-section mb-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <div class="filter-box">
+                        <h5 class="filter-title">Filters</h5><button class="btn w-100 mb-4 btn-gold" id="reset">Reset
+                            Filters
+                        </button>
+                        <h6>Destination</h6>
+                        <div class="innerfilterbox">
+                            <label><input type="checkbox" class="filter-destination" value="Goa">Goa
+                            </label><label><input type="checkbox" class="filter-destination" value="Manali">Manali
+                            </label><label><input type="checkbox" class="filter-destination" value="Kashmir">Kashmir
+                            </label><label><input type="checkbox" class="filter-destination" value="Rajasthan">Rajasthan
+                            </label><label><input type="checkbox" class="filter-destination" value="Kerala">Kerala
+                            </label><label><input type="checkbox" class="filter-destination" value="Dwarka">Dwarka
+                            </label><label><input type="checkbox" class="filter-destination" value="Shimla">Shimla
+                            </label><label><input type="checkbox" class="filter-destination" value="Udaipur">Udaipur
+                            </label><label><input type="checkbox" class="filter-destination" value="Ladakh">Ladakh
+                            </label><label><input type="checkbox" class="filter-destination" value="Andaman">Andaman
+                            </label><label><input type="checkbox" class="filter-destination" value="Ooty">Ooty
+                            </label><label><input type="checkbox" class="filter-destination"
+                                    value="Darjeeling">Darjeeling
+                            </label><label><input type="checkbox" class="filter-destination" value="Rishikesh">Rishikesh
+                            </label><label><input type="checkbox" class="filter-destination" value="Munnar">Munnar
+                            </label><label><input type="checkbox" class="filter-destination"
+                                    value="Mahabaleshwar">Mahabaleshwar
+                            </label><label><input type="checkbox" class="filter-destination"
+                                    value="Kodaikanal">Kodaikanal
+                            </label><label><input type="checkbox" class="filter-destination" value="Jaipur">Jaipur
+                            </label><label><input type="checkbox" class="filter-destination" value="Coorg">Coorg
+                            </label><label><input type="checkbox" class="filter-destination" value="Varanasi">Varanasi
+                            </label><label><input type="checkbox" class="filter-destination" value="Alleppey">Alleppey
+                            </label>
+                        </div>
+                        <hr>
+                        <h6>Budget</h6><label><input type="radio" name="budget" value="low">Under ₹50K
+                            <div class="innerfilterbox">
+                        </label><label><input type="radio" name="budget" value="mid">₹50K - ₹1L
+                        </label><label><input type="radio" name="budget" value="high">₹1L+
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="d-flex flex-column flex-md-row align-items-md-center gap-3 justify-content-between mb-4">
+                    <div class="search-box position-relative col-md-9 col-xl-9"><i
+                            class="fas fa-search search-icon"></i><input type="text" id="globalSearch"
+                            class="form-control luxury-search" placeholder="Search destinations, packages..."></div>
+                    <div class="sort-box"><select id="sortPackages" class="form-select luxury-sort">
+                            <option value="">Sort By</option>
+                            <option value="name-asc">Package Name (A-Z)</option>
+                            <option value="name-desc">Package Name (Z-A)</option>
+                            <option value="destination">Destination</option>
+                            <option value="budget-low-high">Budget Low → High</option>
+                            <option value="budget-high-low">Budget High → Low</option>
+                        </select></div>
+                </div>
+                <div class="row g-4" id="packageList">
+                    <div class="col-md-4 package-item" data-destination="Goa" data-budget="mid">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">4N/5D</span>
+                                <h5>Goa Luxury Escape</h5>
+                                <p class="text-secondary small">Beach villas & yacht party</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
 
-    <!-- FLOATING WHATSAPP SPEED DIAL -->
-    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Manali" data-budget="mid">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">5N/6D</span>
+                                <h5>Manali Snow Escape</h5>
+                                <p class="text-secondary small">Luxury mountain stay</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
 
-    <!-- ================= SCRIPT DEPENDENCIES ================= -->
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Kashmir" data-budget="high">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">6N/7D</span>
+                                <h5>Kashmir Paradise Tour</h5>
+                                <p class="text-secondary small">Houseboats & snowy valleys</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Rajasthan" data-budget="high">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">6N/7D</span>
+                                <h5>Royal Rajasthan</h5>
+                                <p class="text-secondary small">Palaces & desert safari</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Kerala" data-budget="mid">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">5N/6D</span>
+                                <h5>Kerala Backwater Retreat</h5>
+                                <p class="text-secondary small">Houseboat & Ayurveda luxury</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Dwarka" data-budget="low">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">3N/4D</span>
+                                <h5>Dwarka Divine Tour</h5>
+                                <p class="text-secondary small">Temple & spiritual journey</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Shimla" data-budget="mid">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1518002054494-3a6f94352e9d?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">4N/5D</span>
+                                <h5>Shimla Hills Retreat</h5>
+                                <p class="text-secondary small">Colonial charm & snowfall</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Udaipur" data-budget="high">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">4N/5D</span>
+                                <h5>Udaipur Lake Palace Tour</h5>
+                                <p class="text-secondary small">Royal lakeside luxury</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Ladakh" data-budget="high">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">7N/8D</span>
+                                <h5>Ladakh Adventure Ride</h5>
+                                <p class="text-secondary small">Bike trip & mountain views</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Andaman" data-budget="high">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">5N/6D</span>
+                                <h5>Andaman Island Escape</h5>
+                                <p class="text-secondary small">Private beaches & scuba diving</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Ooty" data-budget="mid">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">3N/4D</span>
+                                <h5>Ooty Tea Valley Tour</h5>
+                                <p class="text-secondary small">Tea gardens & toy train</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Darjeeling" data-budget="mid">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">4N/5D</span>
+                                <h5>Darjeeling Himalayan Tour</h5>
+                                <p class="text-secondary small">Tea estates & Kanchenjunga views</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Rishikesh" data-budget="low">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">3N/4D</span>
+                                <h5>Rishikesh River Camp</h5>
+                                <p class="text-secondary small">Rafting & riverside camping</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Munnar" data-budget="mid">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">4N/5D</span>
+                                <h5>Munnar Green Hills</h5>
+                                <p class="text-secondary small">Tea plantations & waterfalls</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Mahabaleshwar" data-budget="low">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">2N/3D</span>
+                                <h5>Mahabaleshwar Escape</h5>
+                                <p class="text-secondary small">Strawberry farms & valley views</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Kodaikanal" data-budget="mid">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">4N/5D</span>
+                                <h5>Kodaikanal Lake Retreat</h5>
+                                <p class="text-secondary small">Lake views & pine forests</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Jaipur" data-budget="mid">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">3N/4D</span>
+                                <h5>Jaipur Pink City Tour</h5>
+                                <p class="text-secondary small">Forts & royal shopping</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Coorg" data-budget="mid">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">4N/5D</span>
+                                <h5>Coorg Coffee Retreat</h5>
+                                <p class="text-secondary small">Coffee estates & waterfalls</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Varanasi" data-budget="low">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">3N/4D</span>
+                                <h5>Varanasi Spiritual Tour</h5>
+                                <p class="text-secondary small">Ganga Aarti & heritage ghats</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package-item" data-destination="Alleppey" data-budget="high">
+                        <div class="package-card">
+                            <div class="image-frame"><img
+                                    src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80">
+                            </div>
+                            <div class="p-3"><span class="badge badge-gold mb-2">5N/6D</span>
+                                <h5>Alleppey Luxury Cruise</h5>
+                                <p class="text-secondary small">Private houseboat experience</p>
+                                <!-- FACILITIES -->
+                                <ul class="package-facilities">
+                                    <li><i class="fas fa-check"></i> Beachfront Resort Stay</li>
+                                    <li><i class="fas fa-check"></i> Complimentary Breakfast</li>
+                                    <li><i class="fas fa-check"></i> Sunset Cruise Experience</li>
+                                    <li><i class="fas fa-check"></i> Airport Pickup & Drop</li>
+                                    <li><i class="fas fa-check"></i> Free WiFi & Pool Access</li>
+                                </ul>
+
+                                <button class="btn btn-gold w-100 btn-sm mt-3">Book on WhatsApp</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="noResult" class="text-center mt-5 d-none">
+                    <h3>No Packages Found</h3>
+                </div>
+            </div>
+        </div>
+        <div class="floating-actions">
+            <a href="https://wa.me/919876543210" class="float-btn float-whatsapp" target="_blank"
+                title="WhatsApp Concierge"><i class="fab fa-whatsapp"></i></a>
+            <div class="float-btn float-scroll" id="scrollTopBtn" title="Back to Top"><i class="fas fa-arrow-up"></i>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <h5 class="text-gold">2G Journey</h5>
+                    <p class="small">Crafting high-tier, pristine international itineraries for premium travelers
+                        seeking ultimate luxury encounters.</p>
+                    <div class="footer-socials mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 lg-ps-5">
+                    <h5>Quick Navigation</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#">Home Base</a></li>
+                        <li class="mb-2"><a href="#destinations">Curated Destinations</a></li>
+                        <li class="mb-2"><a href="#packages">Signature Packages</a></li>
+                        <li class="mb-2"><a href="#gallery">Media Portfolio</a></li>
+                        <li class="mb-2"><a href="#reviews">Guest Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <h5>Newsletter Lounge</h5>
+                    <p class="small">Subscribe to receive private luxury tour package alerts and seasonal discount
+                        structures.</p>
+                    <form id="newsletterForm" class="input-group mb-3">
+                        <input type="email" class="form-control bg-dark border-secondary text-white small"
+                            placeholder="Private Email" required>
+                        <button class="btn btn-gold px-3" type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-4 text-center">
+                <p class="small mb-0">&copy; 2026 2G Journey Private Ltd. All sovereign rights reserved. Developed
+                    to premium standard specifications.</p>
+            </div>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/packages.js"></script>
+    <script></script>
 </body>
+
 </html>

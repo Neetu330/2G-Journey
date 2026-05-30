@@ -1,219 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuxVibe Travels | Adventure Albums</title>
-    
-    <!-- Bootstrap 5 CSS -->
+    <title>2G Journey | Luxury Travel Packages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- FontAwesome Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-    <!-- Google Fonts (Poppins) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- style css -->
-    <link href="assets/css/style.css" rel="stylesheet">
-
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
-<body>
 
-    <!-- ================= NAVIGATION BAR ================= -->
-    <nav class="navbar fixed-top">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand" href="#">LuxVibe Vault</a>
-            <!-- Dynamic breadcrumb button that shows only inside active folders -->
-            <div id="backNavWrapper" class="d-none">
-                <span class="back-to-albums-btn" id="btnBackToAlbums">
-                    <i class="fas fa-arrow-left me-2"></i> Back to Albums
-                </span>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container"><a class="navbar-brand text-white" href="#"><span
+                    class="text-gold">2G</span>Journey</a><button class="navbar-toggler border-0" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="package.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Why Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div
+                    class="d-flex align-items-center bg-black bg-opacity-40 p-2 rounded border border-secondary text-start header-review-widget">
+                    <div class="me-2 text-center"><span class="fw-bold text-white d-block lh-1"
+                            style="font-size:15px;">⭐ 4.9</span><small class="text-gold"
+                            style="font-size: 10px; font-weight:700;">Google Rating</small></div>
+                    <div class="border-start border-secondary ps-2 me-2"><small class="d-block text-white-50 lh-1"
+                            style="font-size: 11px;">250+ Happy</small><small class="fw-medium text-white"
+                            style="font-size: 11px;">Travelers</small></div><a href="https://google.com" target="_blank"
+                        class="btn btn-gold btn-sm py-1 px-2" style="font-size: 11px;">Add Review</a>
+                </div>
             </div>
         </div>
     </nav>
+    <section class="inner-hero-banner">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="inner-banner-title">
+                        <span class="special-text">Moments</span> of <span class="special-text">Luxury</span>
+                    </h1>
 
-    <!-- ================= PAGE HEADINGS ================= -->
-    <header class="gallery-header">
+                    <p class="inner-banner-caption">
+                        Step into a visual collection of elite travel experiences, premium getaways, and world-class
+                        hospitality crafted with perfection.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-section mb-5">
+
+        <div class="container py-4">
+            <div class="row g-4">
+
+                <!-- FILTER -->
+                <div class="col-lg-3">
+                    <div class="filter-box">
+                        <h5 class="text-warning">Categories</h5>
+
+                        <button class="btn w-100 mb-4 btn-gold btn-sm" id="reset">Reset Filters</button>
+
+                        <div class="innerfilterbox">
+                            <label><input type="checkbox" class="cat-filter" value="goa"> Goa</label>
+                            <label><input type="checkbox" class="cat-filter" value="manali"> Manali</label>
+                            <label><input type="checkbox" class="cat-filter" value="picnic"> Picnic</label>
+                            <label><input type="checkbox" class="cat-filter" value="event"> Event</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MAIN -->
+                <div class="col-lg-9">
+
+                    <!-- ALBUM LIST -->
+                    <div id="albumView" class="row g-4">
+
+                        <div class="col-md-4 album-item" data-category="goa" data-album="goa">
+                            <div class="album-card">
+                                <div class="album-thumb">
+                                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+                                </div>
+                                <div class="album-body">
+                                    <span class="badge badge-gold">Goa Trip</span>
+                                    <h6 class="mt-2">Luxury Goa Group Tour</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 album-item" data-category="manali" data-album="manali">
+                            <div class="album-card">
+                                <div class="album-thumb">
+                                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+                                </div>
+                                <div class="album-body">
+                                    <span class="badge badge-gold">Manali</span>
+                                    <h6 class="mt-2">Snow Adventure Trip</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 album-item" data-category="picnic" data-album="picnic">
+                            <div class="album-card">
+                                <div class="album-thumb">
+                                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac">
+                                </div>
+                                <div class="album-body">
+                                    <span class="badge badge-gold">Picnic</span>
+                                    <h6 class="mt-2">Office Fun Day</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- GALLERY -->
+                    <div id="galleryView">
+                        <div class="d-flex justify-content-between mb-3">
+                            <h4 id="albumTitle"></h4>
+                            <span class="back-btn"><i class="fas fa-arrow-left"></i> Back</span>
+                        </div>
+
+                        <div class="row g-3 media-grid" id="mediaContainer"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- LIGHTBOX -->
+        <div class="lightbox" id="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <img src="" id="lightboxImg">
+        </div>
+
+        <div class="modal fade" id="youtubeModal">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark border-0">
+                    <div class="modal-body p-0">
+                        <iframe id="youtubeFrame" width="100%" height="600" src="" frameborder="0"
+                            allow="autoplay; encrypted-media" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="floating-actions">
+            <a href="https://wa.me/919876543210" class="float-btn float-whatsapp" target="_blank"
+                title="WhatsApp Concierge"><i class="fab fa-whatsapp"></i></a>
+            <div class="float-btn float-scroll" id="scrollTopBtn" title="Back to Top"><i class="fas fa-arrow-up"></i>
+            </div>
+        </div>
+
+    </section>
+    <footer>
         <div class="container">
-            <h1 id="mainGalleryHeading">Travel Albums</h1>
-            <p id="mainGallerySubheading">Browse curated memories by destinations and tours</p>
-        </div>
-    </header>
-
-    <main class="pb-5">
-        <div class="container">
-            
-            <!-- ================= GLOBAL CONTROL HUB BAR ================= -->
-            <div class="control-panel mb-5">
-                <div class="row g-3 align-items-center">
-                    <div class="col-md-8 search-wrapper">
-                        <div class="input-group bg-dark rounded border border-secondary px-2">
-                            <span class="input-group-text"><i class="fas fa-search"></i></span>
-                            <input type="text" id="globalGallerySearch" class="form-control" placeholder="Search albums by name or timeline space...">
-                        </div>
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <h5 class="text-gold">2G Journey</h5>
+                    <p class="small">Crafting high-tier, pristine international itineraries for premium travelers
+                        seeking ultimate luxury encounters.</p>
+                    <div class="footer-socials mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
-                    <div class="col-md-4 text-md-end sort-wrapper">
-                        <div class="d-flex align-items-center justify-content-md-end">
-                            <label class="me-2 text-white-50 small text-nowrap"><i class="fas fa-sort me-1"></i> Sort By:</label>
-                            <select id="globalGallerySort" class="form-select">
-                                <option value="date-desc">Date: Newest First</option>
-                                <option value="date-asc">Date: Oldest First</option>
-                                <option value="name-asc">Name: A to Z</option>
-                                <option value="name-desc">Name: Z to A</option>
-                            </select>
-                        </div>
-                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 lg-ps-5">
+                    <h5>Quick Navigation</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#">Home Base</a></li>
+                        <li class="mb-2"><a href="#destinations">Curated Destinations</a></li>
+                        <li class="mb-2"><a href="#packages">Signature Packages</a></li>
+                        <li class="mb-2"><a href="#gallery">Media Portfolio</a></li>
+                        <li class="mb-2"><a href="#reviews">Guest Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <h5>Newsletter Lounge</h5>
+                    <p class="small">Subscribe to receive private luxury tour package alerts and seasonal discount
+                        structures.</p>
+                    <form id="newsletterForm" class="input-group mb-3">
+                        <input type="email" class="form-control bg-dark border-secondary text-white small"
+                            placeholder="Private Email" required>
+                        <button class="btn btn-gold px-3" type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
                 </div>
             </div>
-
-            <!-- ================= VIEW CONTAINER A: MAIN ALBUM LIST VIEW ================= -->
-            <div class="row g-4" id="albumCoversGrid">
-                
-                <!-- Album Card 1 -->
-                <div class="col-md-6 col-lg-4 album-item-wrapper" data-album-id="dubai-2026" data-title="Dubai Luxury Escape" data-date="2026-04-10" data-string-date="April 2026">
-                    <div class="album-card">
-                        <span class="album-badge"><i class="fas fa-images me-1"></i> 2 Items</span>
-                        <div class="album-cover-wrapper">
-                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80" alt="Dubai">
-                        </div>
-                        <div class="album-meta">
-                            <h4 class="album-title">Dubai Luxury Escape</h4>
-                            <div class="album-date"><i class="far fa-calendar-alt me-1"></i> April 2026</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Album Card 2 -->
-                <div class="col-md-6 col-lg-4 album-item-wrapper" data-album-id="goa-2026" data-title="Goa Yacht Week" data-date="2026-05-15" data-string-date="May 2026">
-                    <div class="album-card">
-                        <span class="album-badge"><i class="fas fa-images me-1"></i> 2 Items</span>
-                        <div class="album-cover-wrapper">
-                            <img src="https://images.unsplash.com/photo-1540206395-68808572332f?auto=format&fit=crop&w=600&q=80" alt="Goa">
-                        </div>
-                        <div class="album-meta">
-                            <h4 class="album-title">Goa Yacht Week</h4>
-                            <div class="album-date"><i class="far fa-calendar-alt me-1"></i> May 2026</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Album Card 3 -->
-                <div class="col-md-6 col-lg-4 album-item-wrapper" data-album-id="himalayas-2026" data-title="Himalayan Glass Resorts" data-date="2026-01-22" data-string-date="Jan 2026">
-                    <div class="album-card">
-                        <span class="album-badge"><i class="fas fa-images me-1"></i> 1 Item</span>
-                        <div class="album-cover-wrapper">
-                            <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=600&q=80" alt="Manali">
-                        </div>
-                        <div class="album-meta">
-                            <h4 class="album-title">Himalayan Glass Resorts</h4>
-                            <div class="album-date"><i class="far fa-calendar-alt me-1"></i> Jan 2026</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <!-- ================= VIEW CONTAINER B: INNER MEDIA TRACK TILES (HIDDEN BY DEFAULT) ================= -->
-            <div class="row g-4 d-none" id="innerAlbumMediaGrid">
-                
-                <!-- DUBAI ALBUM CONTENT -->
-                <div class="col-sm-6 col-md-4 col-xl-3 inner-media-item" data-parent-album="dubai-2026" data-type="video" data-name="Dubai Helicopter Tour Ride" data-date="2026-04-10" data-display-date="April 10, 2026" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ">
-                    <div class="gallery-card">
-                        <div class="media-container">
-                            <div class="video-overlay"><i class="fab fa-youtube"></i></div>
-                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=500&q=80" alt="">
-                        </div>
-                        <div class="meta-content">
-                            <h5 class="media-name">Dubai Helicopter Tour Ride</h5>
-                            <span class="media-date">April 10, 2026</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-xl-3 inner-media-item" data-parent-album="dubai-2026" data-type="image" data-name="Burj Al Arab Skyline Night" data-date="2026-04-12" data-display-date="April 12, 2026">
-                    <div class="gallery-card">
-                        <div class="media-container">
-                            <img src="https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?auto=format&fit=crop&w=500&q=80" alt="">
-                        </div>
-                        <div class="meta-content">
-                            <h5 class="media-name">Burj Al Arab Skyline Night</h5>
-                            <span class="media-date">April 12, 2026</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- GOA ALBUM CONTENT -->
-                <div class="col-sm-6 col-md-4 col-xl-3 inner-media-item" data-parent-album="goa-2026" data-type="image" data-name="Yacht Party Sunset Lounge" data-date="2026-05-15" data-display-date="May 15, 2026">
-                    <div class="gallery-card">
-                        <div class="media-container">
-                            <img src="https://images.unsplash.com/photo-1540206395-68808572332f?auto=format&fit=crop&w=500&q=80" alt="">
-                        </div>
-                        <div class="meta-content">
-                            <h5 class="media-name">Yacht Party Sunset Lounge</h5>
-                            <span class="media-date">May 15, 2026</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-xl-3 inner-media-item" data-parent-album="goa-2026" data-type="video" data-name="Goa Scuba Diving Diary" data-date="2026-05-17" data-display-date="May 17, 2026" data-src="https://www.youtube.com/embed/jNQXAC9IVRw">
-                    <div class="gallery-card">
-                        <div class="media-container">
-                            <div class="video-overlay"><i class="fab fa-youtube"></i></div>
-                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="">
-                        </div>
-                        <div class="meta-content">
-                            <h5 class="media-name">Goa Scuba Diving Diary</h5>
-                            <span class="media-date">May 17, 2026</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- HIMALAYAS ALBUM CONTENT -->
-                <div class="col-sm-6 col-md-4 col-xl-3 inner-media-item" data-parent-album="himalayas-2026" data-type="image" data-name="Manali Luxury Dome Room View" data-date="2026-01-22" data-display-date="Jan 22, 2026">
-                    <div class="gallery-card">
-                        <div class="media-container">
-                            <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=500&q=80" alt="">
-                        </div>
-                        <div class="meta-content">
-                            <h5 class="media-name">Manali Luxury Dome Room View</h5>
-                            <span class="media-date">Jan 22, 2026</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- EMPTY LOG RECOVERY STATUS BOX -->
-            <div id="galleryEmptyFallback" class="no-results d-none mt-4">
-                <i class="fas fa-folder-open"></i>
-                <h4>No Matches Located</h4>
-                <p class="text-white-50 small mb-0">Refine your file details string query parameters.</p>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- ================= MEDIA POPUP MODAL ARCHITECTURE ================= -->
-    <div class="modal fade" id="albumAssetModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalAssetTitle">Asset Preview</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img id="modalPopupImage" src="" alt="Preview Pic" class="d-none">
-                    <div id="modalPopupVideoWrapper" class="ratio ratio-16x9 d-none">
-                        <iframe id="modalPopupIframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <span id="modalAssetDate">Date Stamp</span>
-                </div>
+            <div class="border-top border-secondary pt-4 text-center">
+                <p class="small mb-0">&copy; 2026 2G Journey Private Ltd. All sovereign rights reserved. Developed
+                    to premium standard specifications.</p>
             </div>
         </div>
-    </div>
-
-    <!-- Scripts Dependencies -->
+    </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-     <script src="assets/js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="./assets/js/packages.js"></script> -->
+    <script>
+       
+        const data = {
+            goa: {
+                title: "Goa Luxury Trip",
+                media: [
+                    { type: "image", src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e" },
+                    { type: "image", src: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2" },
+                    { type: "youtube", src: "https://www.youtube.com/embed/K4TOrB7at0Y?si=vRoz2Dx4K0Anp3uj" }
+                ]
+            },
+            manali: {
+                title: "Manali Snow Adventure",
+                media: [
+                    { type: "image", src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470" },
+                    { type: "youtube", src: "https://www.youtube.com/embed/K4TOrB7at0Y?si=vRoz2Dx4K0Anp3uj" }
+                ]
+            },
+            picnic: {
+                title: "Office Picnic Event",
+                media: [
+                    { type: "image", src: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac" },
+                    { type: "image", src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d" }
+                ]
+            }
+        };
+
+        // OPEN ALBUM
+        $(".album-item").click(function () {
+
+            let id = $(this).data("album");
+            let album = data[id];
+
+            $("#albumTitle").text(album.title);
+
+            let html = "";
+
+            album.media.forEach((m) => {
+
+                if (m.type === "image") {
+
+                    html += `
+            <div class="col-md-4">
+                <img src="${m.src}" class="light-img">
+            </div>`;
+
+                }
+                else if (m.type === "youtube") {
+
+                    let videoId = m.src.split('/embed/')[1].split('?')[0];
+
+                    html += `
+            <div class="col-md-4">
+                <div class="youtube-thumb" data-video="${m.src}">
+                    <img src="https://img.youtube.com/vi/${videoId}/hqdefault.jpg"
+                         class="img-fluid rounded">
+
+                    <div class="play-btn">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+            </div>`;
+                }
+
+            });
+
+            $("#mediaContainer").html(html);
+            $("#albumView").hide();
+            $("#galleryView").fadeIn();
+        });
+        // BACK
+        $(".back-btn").click(() => {
+            $("#galleryView").hide();
+            $("#albumView").fadeIn();
+        });
+
+        /* ================= LIGHTBOX ================= */
+        $(document).on("click", ".light-img", function () {
+            $("#lightboxImg").attr("src", $(this).attr("src"));
+            $("#lightbox").fadeIn();
+        });
+        $(".lightbox-close").click(() => $("#lightbox").fadeOut());
+
+        /* ================= VIDEO MODAL ================= */
+        $(document).on("click", ".play-video", function () {
+            $("#videoPlayer").attr("src", $(this).attr("src"));
+            $("#videoModal").fadeIn();
+        });
+        $(".video-close").click(() => {
+            $("#videoModal").fadeOut();
+            $("#videoPlayer").attr("src", "");
+        });
+   /* RESET */
+        $("#reset").click(() => {
+            $(".cat-filter").prop("checked", false);
+            $(".album-item").show();
+        });
+        /* ================= FILTER ================= */
+        $(".cat-filter").on("change", function () {
+
+            let selected = $(".cat-filter:checked").map(function () {
+                return $(this).val();
+            }).get();
+
+            if (selected.length === 0) {
+                $(".album-item").show();
+                return;
+            }
+
+            $(".album-item").each(function () {
+                let cat = $(this).data("category");
+                $(this).toggle(selected.includes(cat));
+            });
+        });
+
+     
+
+      
+        
+         $(document).on("click", ".youtube-thumb", function () {
+
+            let videoUrl = $(this).data("video");
+
+            $("#youtubeFrame").attr(
+                "src",
+                videoUrl + "?autoplay=1"
+            );
+
+            $("#youtubeModal").modal("show");
+        });
+
+        $("#youtubeModal").on("hidden.bs.modal", function () {
+            $("#youtubeFrame").attr("src", "");
+        });
+        </script>
+        
 </body>
+
 </html>
